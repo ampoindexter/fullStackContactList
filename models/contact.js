@@ -23,8 +23,13 @@ Contact.create = function(contact, cb) {
 }
 
 Contact.put = function(remainder, cb) {
-  console.log("remainder", remainder);
-  var contactList = JSON.stringify(remainder.data);
+  // console.log("remainder", remainder);
+  if (remainder.hasData()) {
+    var contactList = JSON.stringify(remainder.data);
+  } else {
+    remainder.data = [];
+    var contactList = remainder.data;
+  }
   fs.writeFile(db, contactList, cb);
 }
 
