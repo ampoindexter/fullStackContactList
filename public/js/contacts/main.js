@@ -32,7 +32,6 @@ function contactRow(contact) {
   var $phone = $('<td>').addClass('phone').text(contact.phone);
   var $email = $('<td>').addClass('email').text(contact.email);
   var $buttons = $('<td>');
-
   var $edit = $('<i>').addClass('fa fa-pencil-square-o');
   var $delete = $('<i>').addClass('fa fa-trash-o');
   $tr.append($name, $phone, $email, $edit, $delete);

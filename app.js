@@ -17,9 +17,13 @@ app.use(express.static('public'));
 
 app.use('/', require('./routes/contacts'));
 
-app.use(function(req, res){
-  res.status(404).render('404')
-})
+app.get('/', function(req, res){
+  res.render('contacts');
+});
+
+app.get(function(req, res){
+  res.status(404).render('404');
+});
 
 app.listen(PORT, function(){
   console.log('Listening on port ', PORT);

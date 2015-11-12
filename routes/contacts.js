@@ -8,7 +8,7 @@ var Contact = require('../models/contact');
 router.get('/', function(req, res) {
   Contact.find(function(err, contacts){
     if(err) return res.status(400).send(err);
-    res.render('contacts', {title: 'My Contacts!', items: contacts || [] });
+    res.render('index', {title: 'My Contacts!', items: contacts || [{}] });
   });
 });
 

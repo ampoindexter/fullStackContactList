@@ -22,4 +22,4 @@ Contact.create = function(contact, cb) {
   });
 }
 
-module.exports = Contact;
+module.exports = Contact

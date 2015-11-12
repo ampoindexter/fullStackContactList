@@ -5,23 +5,30 @@ block content
   .container
     - var properties = ['name', 'phone', 'email']
     .row
-      h1= title
+      .col-xs-12
+        h1= title
     .row
-      each val, prop in contacts[0]
-        label #{prop.toUpperCase()}:
-        input(id= prop)
-      button.btn#submit Add
+      .col-xs-12
+        each prop in properties
+          label #{prop.toUpperCase()}:
+          input(id = prop)
+        button.btn#submit Add
     .row
-      table.table
-        thead
-          tr
-            each val, prop in contacts[0]
-            th= prop
-        tbody#contactList
-          each contact, index in contacts
+      .col-xs-12
+        table.table.table-hover.table-striped
+          thead
             tr
-              each prop in contact
-              td(class= prop id= prop)= val
+              each val, prop in items[0]
+                th= prop
+          tbody#contactList
+            each contact, index in items
+              tr
+                each prop, index in contact
+                  td(class= index id= prop)= prop
+                td.edit.text-center
+                  i.fa.fa-pencil-square-o.fa-lg
+                td.delete.text-center
+                  i.fa.fa-trash-o.fa-lg
 
 block scripts
   script(src="js/contacts/main.js")
