@@ -1,0 +1,31 @@
+extends ./layout.jade
+
+block content
+
+  .container
+    - var properties = ['name', 'phone', 'email']
+    .row
+      h1= title
+    .row
+      each val, prop in contacts[0]
+        label #{prop.toUpperCase()}:
+        input(id= prop)
+      button.btn#submit Add
+    .row
+      table.table.table-hover.table-striped.table-bordered
+        thead
+          tr
+            each val, prop in contacts[0]
+            th= prop
+        tbody#contactList
+          each contact, index in contacts
+            tr
+              each prop in contact
+                td(class= prop id= prop)= contacts[index] [prop]
+              td.edit.text-center
+                i.fa.fa-pencil-square-o.fa-lg
+              td.delete.text-center
+                i.fa.fa-trash-o.fa-lg
+
+block scripts
+  script(src="js/contacts/main.js")

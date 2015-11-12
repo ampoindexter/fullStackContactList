@@ -1,0 +1,27 @@
+extends ./layout.jade
+
+block content
+
+  .container
+    - var properties = ['name', 'phone', 'email']
+    .row
+      h1= title
+    .row
+      each val, prop in contacts[0]
+        label #{prop.toUpperCase()}:
+        input(id= prop)
+      button.btn#submit Add
+    .row
+      table.table
+        thead
+          tr
+            each val, prop in contacts[0]
+            th= prop
+        tbody#contactList
+          each contact, index in contacts
+            tr
+              each prop in contact
+              td(class= prop id= prop)= val
+
+block scripts
+  script(src="js/contacts/main.js")
