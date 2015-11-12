@@ -22,4 +22,10 @@ Contact.create = function(contact, cb) {
   });
 }
 
-module.exports = Contact
+Contact.put = function(remainder, cb) {
+  console.log("remainder", remainder);
+  var contactList = JSON.stringify(remainder.data);
+  fs.writeFile(db, contactList, cb);
+}
+
+module.exports = Contact;
