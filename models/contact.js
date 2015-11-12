@@ -23,7 +23,6 @@ Contact.create = function(contact, cb) {
 }
 
 Contact.put = function(remainder, cb) {
-  // console.log("remainder", remainder);
   if (remainder.hasData()) {
     var contactList = JSON.stringify(remainder.data);
   } else {

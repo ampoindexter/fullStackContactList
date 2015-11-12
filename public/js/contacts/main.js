@@ -33,7 +33,6 @@ function deleteContact(e) {
 
   getContacts(function(data) {
     data.splice(i,1);
-    // console.log("thisis data?", data);
     $.post('/delete', {data: data})
       .done(function(opp) {
         console.log(opp)
@@ -42,8 +41,6 @@ function deleteContact(e) {
         console.log(err);
     });
   })
-
-
 }
 
 function addContact() {
