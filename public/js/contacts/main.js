@@ -44,7 +44,7 @@ function deleteContact(e) {
 }
 
 function addContact() {
-  var contact = {}
+  var contact = {};
   contact.name = $('input#name').val();
   contact.phone = $('input#phone').val();
   contact.email = $('input#email').val();

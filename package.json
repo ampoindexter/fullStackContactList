@@ -3,22 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "postinstall": "bower i",
-    "setup": "npm i && bower i"
-  },
-  "engines": {
-    "node": "5.0.0"
-  },
-  "author": "Alicia Poindexter",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.1",
-    "bower": "^1.6.5",
-    "express": "^4.13.3",
+    "body-parser": "^1.14.2",
+    "bower": "^1.7.2",
+    "express": "^4.13.4",
     "jade": "^1.11.0",
     "morgan": "^1.6.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ampoindexter/fullStackContactList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ampoindexter/fullStackContactList/issues"
+  },
+  "homepage": "https://github.com/ampoindexter/fullStackContactList#readme"
 }
